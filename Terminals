@@ -14,3 +14,6 @@ Python:
 Venv creating: `python -m venv name`
 Venv activate: `source name/bin/activate`
 Venv install pkg: `name/bin/pip install LibName` (or `pip install LibName` after activating)
+
+Net settings:
+Ports checking: `sudo lsof -i -P -n`
