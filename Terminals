@@ -7,8 +7,11 @@ Once: `vcgencmd measure_temp`
 Every N seconds: `watch -n N vcgencmd measure_temp`
 
 Admin cmd's:
-`sudo halt`
-`sudo reboot`
+`sudo halt` - shutdown
+`sudo reboot` - reboot
+
+`nohup program </dev/null &` - exec program in backgroung (with ssh)
+`ps` - for find PID, `kill PID` for kill task
 
 Python:
 Venv creating: `python -m venv name`
