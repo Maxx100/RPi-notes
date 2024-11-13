@@ -1,6 +1,7 @@
 SSH settings:\
 `sudo nano /etc/ssh/sshd_config`\
-`sudo systemctl restart sshd`
+`sudo systemctl restart sshd`\
+Transfer files (SSH): `scp -P PORT file username@host:directory`
 
 RPi Temperature:\
 Once: `vcgencmd measure_temp`\
