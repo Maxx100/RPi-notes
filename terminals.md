@@ -21,4 +21,5 @@ Venv install pkg: `name/bin/pip install LibName` (or `pip install LibName` after
 
 Net settings:\
 Ports checking: `sudo lsof -i -P -n`\
-Net status: `nmcli dev status`
+Net status: `nmcli dev status`\
+WIFI on/off: `nmcli radio wifi on/off`
