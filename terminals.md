@@ -20,4 +20,5 @@ Venv activate: `source name/bin/activate`\
 Venv install pkg: `name/bin/pip install LibName` (or `pip install LibName` after activating)
 
 Net settings:\
-Ports checking: `sudo lsof -i -P -n`
+Ports checking: `sudo lsof -i -P -n`\
+Net status: `nmcli dev status`
