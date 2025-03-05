@@ -23,3 +23,32 @@ Net settings:\
 Ports checking: `sudo lsof -i -P -n`\
 Net status: `nmcli dev status`\
 WIFI on/off: `nmcli radio wifi on/off`
+
+Services:\
+CD to serv folder: `cd /lib/systemd/system`\
+Create service: `sudo nano <name>.service`\
+(recomended use bash script to start your tasks. For example in *1)\
+Reload systemctl: `sudo systemctl daemon-reload`\
+Enable service: `sudo systemctl enable <name>.service`\
+Start service: `sudo systemctl start <name>.service`\
+Check service: `sudo systemctl status <name>.service`\
+Reload service: `sudo systemctl restart <name>.service`
+
+__________\
+*1
+```
+[Unit]
+Description=<name of service>
+After=network.target
+
+[Service]
+Type=idle
+Restart=always
+RestartSec=3
+User=<username>
+WorkingDirectory=<folder with bash script>
+ExecStart=/bin/bash ./<name>.sh
+
+[Install]
+WantedBy=multi-user.target
+```
