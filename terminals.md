@@ -24,6 +24,12 @@ Ports checking: `sudo lsof -i -P -n`\
 Net status: `nmcli dev status`\
 WIFI on/off: `nmcli radio wifi on/off`
 
+Hardware info:
+All info about CPU: `lscpu`
+CPU Name: `cat /proc/cpuinfo  | grep 'name'| uniq`
+CPU Cores: `cat /proc/cpuinfo  | grep process| wc -l`
+Usage: `htop`
+
 Services:\
 CD to serv folder: `cd /lib/systemd/system`\
 Create service: `sudo nano <name>.service`\
