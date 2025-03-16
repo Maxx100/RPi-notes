@@ -24,10 +24,10 @@ Ports checking: `sudo lsof -i -P -n`\
 Net status: `nmcli dev status`\
 WIFI on/off: `nmcli radio wifi on/off`
 
-Hardware info:
-All info about CPU: `lscpu`
-CPU Name: `cat /proc/cpuinfo  | grep 'name'| uniq`
-CPU Cores: `cat /proc/cpuinfo  | grep process| wc -l`
+Hardware info:\
+All info about CPU: `lscpu`\
+CPU Name: `cat /proc/cpuinfo  | grep 'name'| uniq`\
+CPU Cores: `cat /proc/cpuinfo  | grep process| wc -l`\
 Usage: `htop`
 
 Services:\
