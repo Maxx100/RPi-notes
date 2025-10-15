@@ -1,0 +1,14 @@
+[Unit]
+Description=<name of service>
+After=network.target
+
+[Service]
+Type=idle
+Restart=always
+RestartSec=3
+User=<username>
+WorkingDirectory=<folder with bash script>
+ExecStart=/bin/bash ./<name>.sh
+
+[Install]
+WantedBy=multi-user.target
