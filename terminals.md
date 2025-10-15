@@ -19,6 +19,11 @@ Venv creating: `python -m venv name`\
 Venv activate: `source name/bin/activate`\
 Venv install pkg: `name/bin/pip install LibName` (or `pip install LibName` after activating)
 
+Disk:
+Get used space by partitions: `df -h`
+Get used space by each folder or file: `sudo du -sh /*` (or another path)
+Set space limit for logs: `sudo journalctl --vacuum-size=100M`
+
 Net settings:\
 Ports checking: `sudo lsof -i -P -n`\
 Net status: `nmcli dev status`\
@@ -33,28 +38,9 @@ Usage: `htop`
 Services:\
 CD to serv folder: `cd /lib/systemd/system`\
 Create service: `sudo nano <name>.service`\
-(recomended use bash script to start your tasks. For example in *1)\
+(recomended use bash script to start your tasks. For example in [file](files/service_example)\
 Reload systemctl: `sudo systemctl daemon-reload`\
 Enable service: `sudo systemctl enable <name>.service`\
 Start service: `sudo systemctl start <name>.service`\
 Check service: `sudo systemctl status <name>.service`\
 Reload service: `sudo systemctl restart <name>.service`
-
-__________\
-*1
-```
-[Unit]
-Description=<name of service>
-After=network.target
-
-[Service]
-Type=idle
-Restart=always
-RestartSec=3
-User=<username>
-WorkingDirectory=<folder with bash script>
-ExecStart=/bin/bash ./<name>.sh
-
-[Install]
-WantedBy=multi-user.target
-```
